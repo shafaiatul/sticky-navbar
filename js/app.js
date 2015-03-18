@@ -1,14 +1,26 @@
-var prevScrollTop = 0;
-var $headerNav = $('header');
+(function ($) {
 
-$(document).scroll(function() {
-  var currentScrollTop = $(this).scrollTop();
+  'use strict';
 
-  if (currentScrollTop > prevScrollTop) {
-  	$headerNav.hide();
-  } else {
-  	$headerNav.show();
-  }
+  var prevScrollTop = 0;
+  var $headerNav = $('body > header');
 
-  prevScrollTop = currentScrollTop;
-});
+  // every time user scrolls (up or down)
+  $(document).scroll(function () {
+    var currentScrollTop = $(this).scrollTop();
+
+    // if scrolling downward, show the navbar
+    if (currentScrollTop > prevScrollTop) {
+      $headerNav.hide();
+    }
+
+    // if scrolling upward, show the navbar
+    else {
+      $headerNav.show();
+    }
+
+    // remember where the last scroll position was
+    prevScrollTop = currentScrollTop;
+  });
+
+})(this.jQuery);

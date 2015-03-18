@@ -1,13 +1,17 @@
+/* Use Lato from Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
 body {
   width: 960px;
   margin: 0 auto;
+  font-family: 'Lato', sans-serif;
 }
 
 header {
   position: fixed;  /* sticky */
   width: 960px;
   top: 0;           /* to the top */
-  background: #5a728c;
+  background: rgba(31,119,164,0.9);
 }
 
 nav ul {
@@ -22,9 +26,14 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  padding: 10px 15px;
+  line-height: 14px;
+  padding: 10px 15px 12px;
   text-decoration: none;
   color: #fff;
+}
+
+.content {
+  margin-top: 36px;
 }
 
 /**
