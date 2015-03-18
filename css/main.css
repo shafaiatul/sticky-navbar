@@ -1,0 +1,42 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;  /* sticky */
+  width: 960px;
+  top: 0;           /* to the top */
+  background: #5a728c;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/**
+ * Micro clearfix hack from Nicolas Gallagher
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
